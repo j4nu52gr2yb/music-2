@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>music 2</title>
+	<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+	<div id="data"></div>
+	<script>
+	// Fetch the JSON file
+	fetch('assets/data.json')
+		.then(response => response.json())
+		.then(data => {
+		// Process and display the data
+		let output = '<ol>';
+		data.forEach(item => {
+			output += `<li><a href=${item.webpage_url}>${item.title}</li>`;
+		});
+		output += '</ol>';
+		document.getElementById('data').innerHTML = output;
+	})
+	.catch(error => console.error('Error fetching JSON:', error));
+	</script>
+</body>
+</html>
