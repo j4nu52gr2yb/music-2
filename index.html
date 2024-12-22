@@ -7,21 +7,26 @@
 	<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-	<div id="data"></div>
-	<script>
-	// Fetch the JSON file
-	fetch('assets/data.json')
-		.then(response => response.json())
-		.then(data => {
-		// Process and display the data
-		let output = '<ol>';
-		data.forEach(item => {
-			output += `<li><a href=${item.webpage_url}>${item.title}</li>`;
-		});
-		output += '</ol>';
-		document.getElementById('data').innerHTML = output;
-	})
-	.catch(error => console.error('Error fetching JSON:', error));
-	</script>
+	<main>
+		<div id="text">
+				<h1>music</h1>
+			<div id="data"></div>
+		</div>
+		<script>
+		// Fetch the JSON file
+		fetch('assets/data.json')
+			.then(response => response.json())
+			.then(data => {
+			// Process and display the data
+			let output = '<ol>';
+			data.forEach(item => {
+				output += `<li><a href=${item.webpage_url}>${item.title}</li>`;
+			});
+			output += '</ol>';
+			document.getElementById('data').innerHTML = output;
+		})
+		.catch(error => console.error('Error fetching JSON:', error));
+		</script>
+	</main>
 </body>
 </html>

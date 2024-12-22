@@ -1,3 +1,27 @@
 body{
 	font-family: monospace;
+	background-color: rgb(0, 0, 0);
+}
+a,ol{
+	color: #7c1d2a;
+	display: inline-block;
+}
+a:hover{
+	color: #ff1965;
+}
+main{
+	width: 80%;
+	margin: 0 auto;
+	background-color: #111111;
+	border-radius: 15px;
+}
+#text{
+	margin-left: 5%;
+	margin-right: 5%;
+	color: #cccccc;
+	display: inline-block;
+	width: 90%;
+}
+h1{
+	text-align: center;
 }
