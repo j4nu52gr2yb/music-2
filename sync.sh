@@ -5,3 +5,7 @@ echo -n "[" > data.json &&
 yt-dlp --flat-playlist --print "%(.{title,webpage_url})j," $PLAYLIST_URL | \
 sed "$ s/},/}]/" >> data.json
 mv data.json assets
+git pull
+git add *
+git commit
+git push
