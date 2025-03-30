@@ -7,5 +7,5 @@ sed "$ s/},/}]/" >> data.json
 mv data.json assets
 git pull
 git add *
-git commit
+git commit -m sync
 git push
